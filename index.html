@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tech Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1A5319;
+            background-color: #f4f4f4;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                "main main main"
+                "footer footer footer";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 50px 1fr auto;
+            gap: 10px;
+            height: 100vh;
+            padding: 10px;
+        }
+
+        header {
+            grid-area: header;
+            color: #508D4E;
+            font-family: 'Bangers', cursive;
+            font-size: 2.5em;
+            color: #1A5319;
+            text-shadow: 2px 2px #000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #1A5319;
+        }
+
+        .main-content {
+            grid-area: main;
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: left;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #1A5319;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style-type: none;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+
+        .nav-item a:hover {
+            background-color: #508D4E;
+            color: white;
+        }
+
+        h1 {
+            color: #1A5319;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            color: #333;
+            font-weight: normal;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        li {
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+         /* Media query for responsive design on smaller screens */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">MY TECH SPACE</header>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="codingresources.html">Coding Resources</a></li>
+                <li class="nav-item"><a href="events.html">Events</a></li>
+                <li class="nav-item"><a href="community.html">Community</a></li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <h1>Welcome to My Tech Space!</h1>
+            <p>In My Tech Space, I’m excited to share the tools and resources that have been instrumental in my own tech journey. 
+                I’m passionate about offering you the same kind of support that helped me grow, whether you’re just starting out or
+                 already deep into development. From handpicked coding tutorials and detailed guides to the latest tech events, 
+                 everything here is designed to help you succeed and enjoy your path in the tech world as much as I have.</p>
+            
+            <img src="image1.png" alt="Welcome to My Tech Space" />
+            
+            <p>Take a look around my site and discover:</p> 
+            <ul> 
+                <li><strong>Coding Resources:</strong> Dive into a curated collection of online platforms, tutorials, and courses that I’ve found invaluable for building and honing tech skills.</li>
+                <li><strong>Tech Events:</strong> Keep up with exciting tech events and meetups both in South Africa and beyond, so you can connect with like-minded individuals and stay at the forefront of the industry.</li> 
+                <li><strong>Community Engagement:</strong> Become part of a vibrant community where you can share your journey, exchange ideas, and learn from others who share your passion for technology.</li>
+             </ul>
+
+            <p>Maybe you're a newbie and trying to get your feet in tech, there's a million of us just like you. This isn't a pro starter pack into the field, but I know it's a good start.</p>
+        </main>
+        
+        <footer class="footer">&copy; By Siphesihle Shezi.</footer>
+    </div>
+</body>
+</html>

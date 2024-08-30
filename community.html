@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Tips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        body, h1, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1A5319;
+            background-color: #f4f4f4;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                "main main main"
+                "footer footer footer";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 50px 1fr auto;
+            gap: 10px;
+            height: 100vh;
+            padding: 10px;
+        }
+
+        header {
+            grid-area: header;
+            color: #508D4E;
+            font-family: 'Bangers', cursive;
+            font-size: 2.5em;
+            color: #1A5319;
+            text-shadow: 2px 2px #000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #1A5319;
+        }
+
+        .main-content {
+            grid-area: main;
+            background-color: #ffffff;
+            padding: 20px;
+            /* text-align: center; */
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #1A5319;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style-type: none;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+
+        .nav-item a:hover {
+            background-color: #508D4E;
+            color: white;
+        }
+
+        h1, h2 {
+            color: #1A5319;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+
+        }
+
+        p {
+            color: #333;
+            font-weight: normal;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        form {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"], form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #1A5319;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #508D4E;
+        }
+
+        .tips-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tip-item {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .tip-item button {
+            background-color: #ff6f6f;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+            font-size: 0.9em;
+        }
+
+        .tip-item .like {
+            background-color: #1A5319;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+            font-size: 0.9em;
+        }
+
+        .tip-item .like:hover {
+            background-color: #508D4E;
+        }
+
+        .tip-item .like-count {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">MY TECH SPACE</header>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="codingresources.html">Coding Resources</a></li>
+                <li class="nav-item"><a href="events.html">Events</a></li>
+                <li class="nav-item"><a href="community.html">Community</a></li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <h1>Welcome to the Community Page!</h1>
+            <p>The tech space is one that continuously grows. If you could share a tip, what would it be?
+                Share your valuable tech tips and learn from others.
+                 Our community is a space for collaboration, where we exchange knowledge and 
+                 support each other in our tech journeys.</p>
+
+            <form id="tipForm">
+                <h2>Submit a Tip</h2>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="tip">Your Tip:</label>
+                <textarea id="tip" name="tip" rows="5" required></textarea>
+                <input type="submit" value="Submit Tip">
+            </form>
+
+            <h2>Tech Tips</h2>
+            <ul id="tipsList" class="tips-list">
+            </ul>
+        </main>
+        
+        <footer class="footer">&copy; By Siphesihle Shezi.</footer>
+    </div>
+
+    <script>
+        //variable containing bad words.
+        // need to use an API 
+        const vulgarWords = ["badwords"];
+
+        document.getElementById('tipForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const tip = document.getElementById('tip').value;
+
+            if (name && tip) {
+                if (!containsVulgarWords(tip)) {
+                    addTip(name, tip);
+                    document.getElementById('tipForm').reset();
+                } else {
+                    alert("Your tip contains inappropriate language and cannot be submitted.");
+                }
+            }
+        });
+
+        function containsVulgarWords(text) {
+            return vulgarWords.some(word => text.toLowerCase().includes(word.toLowerCase()));
+        }
+
+        function addTip(name, tip) {
+            const tipList = document.getElementById('tipsList');
+            const tipItem = document.createElement('li');
+            tipItem.className = 'tip-item';
+            tipItem.innerHTML = `
+                <strong>${name}:</strong> <p>${tip}</p>
+                <button class="like" data-liked="false">Like</button> <span class="like-count">0</span>
+            `;
+            tipList.appendChild(tipItem);
+
+            // Like button functionality
+            const likeButton = tipItem.querySelector('.like');
+            const likeCount = tipItem.querySelector('.like-count');
+            let count = 0;
+            let liked = false;
+
+            likeButton.addEventListener('click', function() {
+                if (!liked) {
+                    count++;
+                    likeCount.textContent = count;
+                    likeButton.textContent = 'Unlike';
+                    liked = true;
+                } else {
+                    count--;
+                    likeCount.textContent = count;
+                    likeButton.textContent = 'Like';
+                    liked = false;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

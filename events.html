@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in South Africa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+    <style>
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1A5319;
+            background-color: #f4f4f4;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                "main main sidebar"
+                "footer footer footer";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 50px 1fr auto;
+            gap: 10px;
+            height: 100vh;
+            padding: 10px;
+        }
+
+        header {
+            grid-area: header;
+            color: #508D4E;
+            font-family: 'Bangers', cursive;
+            font-size: 2.5em;
+            color: #1A5319;
+            text-shadow: 2px 2px #000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #1A5319;
+        }
+
+        .main-content {
+            grid-area: main;
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #1A5319;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style-type: none;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+
+        .nav-item a:hover {
+            background-color: #508D4E;
+            color: white;
+        }
+
+        h1, h2 {
+            color: #1A5319;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: left;
+            color: black;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-left: 20px;
+            padding: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        a {
+            color: green;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">MY TECH SPACE</header>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="codingresources.html">Coding Resources</a></li>
+                <li class="nav-item"><a href="events.html">Events</a></li>
+                <li class="nav-item"><a href="community.html">Community</a></li>
+
+            </ul>
+        </nav>
+        <main class="main-content">
+            <h1>Tech Events in South Africa</h1>
+            <p>South Africa hosts a variety of tech events throughout the year, catering to enthusiasts, professionals, and entrepreneurs. These events offer opportunities for networking, learning, and showcasing innovations.</p>
+            
+            <h2>Why Attend?</h2>
+            <p>Attending these events helps you stay updated with the latest trends, meet like-minded professionals, and discover new career opportunities. Whether you're a seasoned developer or just starting, there's something for everyone.</p>
+
+            <h2>Upcoming Events</h2>
+            <p>Check platforms like <a href="https://www.eventbrite.com/">Eventbrite</a> and <a href="https://www.meetup.com/">Meetup</a> for the latest tech events near you.
+            Here are some of the top events you might want to attend:
+            <ul>
+                <li><a href="https://techspocapetown.co.za/">TECHSPO Cape Town</a>: A tech event showcasing the latest innovations in technology, with international exhibitions in various cities.</li>
+                <li><a href="https://events.microsoft.com/en-us/allevents/?language=English&clientTimeZone=1&search=south%20africa">Microsoft Events</a>: Events designed for developers, IT professionals, partners, educators, and business professionals, featuring growth opportunities and learning experiences.</li>
+                <li><a href="https://www.ethcapetown.com/">ETHCape Town</a>: Connects tech leaders from across the continent to explore opportunities in FinTech, AI, blockchain, and more.</li>
+                <li><a href="https://buildwithayoba.gklink.co/">#buildwithayoba</a>:  Africa’s leading all-in-one super app, is transforming communication, entertainment,
+                     and e-commerce. You'll get to learn how you can partner with ayoba to elevate your projects, whether you're a developer, gamer, business owner, or content creator.</li>
+                <li><a href="https://lu.ma/7rhbtjdu">Neonomad</a>: Join NeoNomad in Cape Town this First Thursday for their inaugural crypto workshop! You'll get to enjoy a beginner-friendly session on cryptocurrency,
+                     followed by a networking event. 
+                    It’s a great chance to relax, meet new people, and explore the world of crypto.</li>
+            
+            </ul>
+
+            <img src="event.png" alt="People meeting up at a tech event" />
+
+            <h2>Local Meetup Groups</h2>
+            <p>To connect with tech enthusiasts in your area, consider joining a local meetup group. These groups can often host events, workshops, and social gatherings where you can learn and share knowledge.</p>
+            <p>A personal favourite is <a href="https://www.geekulcha.dev/">Geekulcha</a>, but there's many more and I'd love to see suggestions on the Tech Tips about them. </p>.
+        </main>
+        
+        <footer class="footer">&copy; By Siphesihle Shezi.</footer>
+    </div>
+</body>
+</html>

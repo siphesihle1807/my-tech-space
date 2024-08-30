@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Resources</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+    <style>
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1A5319;
+    background-color: #f4f4f4;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "main main sidebar"
+        "footer footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 50px 1fr auto;
+    gap: 10px;
+    height: 100vh;
+    padding: 10px;
+}
+
+header {
+    grid-area: header;
+    color: #508D4E;
+    font-family: 'Bangers', cursive;
+    font-size: 2.5em;
+    color: #1A5319; 
+    text-shadow: 2px 2px #000;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #1A5319;
+}
+
+.main-content {
+    grid-area: main;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: left;
+    font-weight: normal;
+}
+
+footer {
+    grid-area: footer;
+    background-color:#1A5319;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.nav-item a:hover {
+    background-color: #508D4E;
+    color: white;
+}
+
+h1, h2 {
+    color: #1A5319;
+    text-align: center;
+}
+
+p {
+    text-align: left;
+    color: black;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+ul {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">MY TECH SPACE</header>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="codingresources.html">Coding Resources</a></li>
+                <li class="nav-item"><a href="events.html">Events</a></li>
+                <li class="nav-item"><a href="community.html">Community</a></li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <h1>Where to Start?</h1>
+            <p>There are numerous resources available to help you gain the tech skills you need(or want),
+                 whether you're just starting or looking to advance your knowledge, believe me when I say,
+                you will want a piece of every pie. Below is a list of some of the top resources, 
+                academies, and learnerships you can explore:</p>
+            
+            <img src="laptop.png" alt="People using laptops" />
+
+            <h2>Online Platforms</h2>
+            <ul>
+                <li><a href="https://www.freecodecamp.org/">freeCodeCamp</a>: A free platform offering interactive coding lessons and certifications in web development, data science, and more. Features projects and challenges to build a portfolio.</li>
+                <li><a href="https://www.codecademy.com/">Codecademy</a>: Offers both free and paid courses on various programming languages and technologies, including Python, JavaScript, and HTML/CSS. Interactive exercises enhance learning.</li>
+                <li><a href="https://www.coursera.org/">Coursera</a>: Features a wide range of tech courses from top universities and companies. Audit many courses for free or pay for certification and degrees.</li>
+                <li><a href="https://www.pluralsight.com/">Pluralsight</a>: Provides extensive courses on software development, IT operations, data, and more. Includes learning paths, assessments, and hands-on labs.</li>
+                <li><a href="https://www.khanacademy.org/">Khan Academy</a>: Offers free lessons on computer science, programming, and mathematics with interactive exercises and instructional videos.</li>
+                <li><a href="https://www.sololearn.com/">SoloLearn</a>: A mobile-first platform for free coding courses in various languages, including interactive exercises and community forums.</li>
+                <li><a href="https://www.udemy.com/">Udemy</a>: Provides a wide range of courses on programming and web development with options for free and paid content. Frequent discounts available.</li>
+                <li><a href="https://mimo.org/">Mimo</a>: Offers bite-sized coding lessons and projects designed for learning on the go, ideal for busy schedules.</li>
+                <li><a href="https://www.youtube.com/@programmingwithmosh">Programming with Mosh</a> : Mosh Hamedani is a software engineer with over 20 years of 
+                    experience. He's all about clear, concise, practical coding tutorials 
+                    – no fluff, just the good stuff!</li>
+            </ul>
+
+            <img src="image2.png" alt="Learning and growth in tech" style="width: 100%; height: auto; margin: 20px 0;" />
+
+            <h2>Learnerships and Bootcamps</h2>
+            <ul>
+                <li><a href="https://wethinkcode.co.za/">WeThinkCode</a>: Offers free, full-time coding education through a rigorous selection process and project-based learning, focusing on problem-solving skills.</li>
+                <li><a href="https://umuzi.org/">Umuzi</a>: Provides tech learnerships and internships with a focus on upskilling and employment for young talent in various technology fields.</li>
+                <li><a href="https://www.alxafrica.com/">ALX</a>: Delivers transformative learning programs through project-based training, aiming to build a skilled workforce in tech and other fields.</li>
+                <li><a href="https://www.lewagon.com/">Le Wagon</a>: Provides immersive coding bootcamps focusing on web development and data science with hands-on projects for practical experience.</li>
+            </ul>
+        </main>
+
+        <footer class="footer">&copy; By Siphesihle Shezi.</footer>
+    </div>
+</body>
+</html>
